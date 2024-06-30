@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 const mongoose = require("mongoose");
-const routes = require("./routes/todo.route");
+
 app.use(express.json());
+
+const routes = require("./routes/todo.route.js");
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -14,7 +16,7 @@ mongoose
     console.log("Can't connect to Database...");
   });
 
-app.use(routes);
+app.use('/', routes);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
