@@ -54,6 +54,11 @@ input[type="text"] {
   justify-content: space-between;
 }
 
+.todo.done .text {
+  text-decoration: line-through;
+  color: gray;
+}
+
 .text {
   flex: 1;
   overflow-wrap: break-word;
@@ -77,6 +82,17 @@ input[type="text"] {
   color: darkgreen;
 }
 
+.save {
+  cursor: pointer;
+  font-size: 20px;
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+.save:hover {
+  color: darkblue;
+}
+
 .delete {
   cursor: pointer;
   font-size: 20px;
@@ -86,4 +102,8 @@ input[type="text"] {
 
 .delete:hover {
   color: #fa0606;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
 }
