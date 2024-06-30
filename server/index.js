@@ -8,7 +8,7 @@ app.use(express.json());
 const routes = require("./routes/todo.route");
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("Database Connectd..");
   })
