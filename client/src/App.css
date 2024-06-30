@@ -1,0 +1,89 @@
+/* App.css */
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.top {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.add {
+  background-color: green;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.add:hover {
+  background-color: darkgreen;
+}
+
+.todo {
+  position: relative;
+  margin-top: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  flex: 1;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit {
+  cursor: pointer;
+  font-size: 20px;
+  color: green;
+  transition: color 0.3s ease;
+}
+
+.edit:hover {
+  color: darkgreen;
+}
+
+.delete {
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  transition: color 0.3s ease;
+}
+
+.delete:hover {
+  color: #fa0606;
+}
