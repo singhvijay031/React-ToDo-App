@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:8000";
+const baseUrl = "https://todo-dsdcqu9ey-bijay-mahatos-projects.vercel.app/";
 
 const getAllToDo = (setToDo) => {
   axios.get(baseUrl).then(({ data }) => {
