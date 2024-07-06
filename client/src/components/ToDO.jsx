@@ -2,8 +2,9 @@ import { useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { AiOutlineSave } from "react-icons/ai";
+import "../App.css";
 
-const ToDo = ({ item, updateToDo, toggleDoneToDo, deleteToDo }) => {
+const ToDo = ({ item, updateToDo, deleteToDo }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(item.text);
 
@@ -14,7 +15,6 @@ const ToDo = ({ item, updateToDo, toggleDoneToDo, deleteToDo }) => {
 
   return (
     <div className={`todo ${item.done ? "done" : ""}`}>
-      <input type="checkbox" checked={item.done} onChange={toggleDoneToDo} />
       {isEditing ? (
         <input
           type="text"
@@ -32,7 +32,7 @@ const ToDo = ({ item, updateToDo, toggleDoneToDo, deleteToDo }) => {
         ) : (
           <BiEdit className="edit" onClick={() => setIsEditing(true)} />
         )}
-        <AiFillDelete className="delete" onClick={deleteToDo} />
+        <AiFillDelete className="delete" onClick={() => deleteToDo(item._id)} />
       </div>
     </div>
   );

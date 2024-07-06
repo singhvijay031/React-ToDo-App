@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import ToDo from "./components/ToDO";
-import {
-  getAllToDo,
-  addToDo,
-  updateToDo,
-  toggleDoneToDo,
-  deleteToDo,
-} from "./utils/HandleApi";
+import { getAllToDo, addToDo, updateToDo, deleteToDo } from "./utils/HandleApi";
 
 function App() {
   const [toDo, setToDo] = useState([]);
@@ -27,6 +21,10 @@ function App() {
     if (newText.trim()) {
       updateToDo(id, newText, setToDo);
     }
+  };
+
+  const handleDelete = (id) => {
+    deleteToDo(id, setToDo);
   };
 
   return (
@@ -49,8 +47,7 @@ function App() {
             key={item._id}
             item={item}
             updateToDo={handleUpdate}
-            toggleDoneToDo={() => toggleDoneToDo(item._id, setToDo)}
-            deleteToDo={() => deleteToDo(item._id, setToDo)}
+            deleteToDo={() => handleDelete(item._id)}
           />
         ))}
       </div>

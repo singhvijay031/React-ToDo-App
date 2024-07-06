@@ -23,16 +23,10 @@ const updateToDo = (id, text, setToDo) => {
   });
 };
 
-const toggleDoneToDo = (id, setToDo) => {
-  axios.post(`${baseUrl}/toggle`, { _id: id }).then(() => {
-    getAllToDo(setToDo);
-  });
-};
-
 const deleteToDo = (id, setToDo) => {
   axios.post(`${baseUrl}/delete`, { _id: id }).then(() => {
     getAllToDo(setToDo);
   });
 };
 
-export { getAllToDo, addToDo, updateToDo, toggleDoneToDo, deleteToDo };
+export { getAllToDo, addToDo, updateToDo, deleteToDo };
